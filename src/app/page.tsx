@@ -1,13 +1,20 @@
 import Header from '@/components/Header/Header';
 import PlaylistItem from '@/components/PlaylistCard/PlaylistItem';
 import React from 'react';
+import { getSongs } from '../../actions/getSongs';
+import HomePageContent from '@/components/HomePage/HomePageContent';
 
-const Home = () => {
+export const revalidate = 0;
+
+const Home = async () => {
   const PlaylistItemData = {
     name: 'Liked Songs',
     href: '/',
     image: '/images/liked.png',
   };
+
+  const songs = await getSongs();
+
   return (
     <div className='bg-neutral-900 rounded-lg h-full w-full overflow-hidden overflow-y-auto'>
       <Header>
@@ -25,7 +32,7 @@ const Home = () => {
       </div>
       <div className='mt-2 mb-7 px-6'>
         <div className='flex justify-between items-center'>
-          <h1 className='text-white text-2xl font-semibold'>List of Songs</h1>
+          <HomePageContent songs={songs} />
         </div>
       </div>
     </div>
