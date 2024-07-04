@@ -13,7 +13,6 @@ const SearchInput = () => {
   // Adding a hook for debouncing the search Engine
   const debouncedValue = useDebounce<string>(value, 500);
 
-  console.log(debouncedValue, 'debouncedValue');
   useEffect(() => {
     const query = { title: debouncedValue };
     const url = qs.stringifyUrl({

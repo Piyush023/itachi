@@ -9,7 +9,7 @@ export const revalidate = 0;
 const Home = async () => {
   const PlaylistItemData = {
     name: 'Liked Songs',
-    href: '/',
+    href: '/liked',
     image: '/images/liked.png',
   };
 
