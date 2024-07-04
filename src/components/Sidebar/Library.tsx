@@ -1,11 +1,28 @@
 'use client';
 
+import { useUser } from '@supabase/auth-helpers-react';
 import React from 'react';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { TbPlaylist } from 'react-icons/tb';
+import useAuthModal from '../../../hooks/useAuthModal';
+import useUploadModal from '../../../hooks/useUploadModal';
 
 const Library = () => {
-  const onClick = () => {};
+  const user = useUser();
+
+  const autModal = useAuthModal();
+
+  const uploadModal = useUploadModal();
+
+  const onClick = () => {
+    if (!user) {
+      autModal.onOpen();
+    } else {
+      // Check for Subscription
+      uploadModal.onOpen();
+    }
+  };
+
   return (
     <div className='flex flex-col'>
       <div className='flex items-center justify-between px-5 pt-4'>
