@@ -7,12 +7,12 @@ import {
 import { useRouter } from 'next/navigation';
 import Modal from './Modal';
 import { useEffect, useState } from 'react';
-import useUploadModal from '../../../hooks/useUploadModal';
+import useUploadModal from '../../../../hooks/useUploadModal';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 import Input from '../Form/Input';
 import Button from '../Header/Button';
 import toast from 'react-hot-toast';
-import { useUser } from '../../../hooks/useUser';
+import { useUser } from '../../../../hooks/useUser';
 import uniqid from 'uniqid';
 
 const UploadModal = () => {

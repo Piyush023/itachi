@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
-import { Song } from '../../../types';
+import { Song } from '../../../../types';
 import SongItem from './SongItem';
-import useOnPlay from '../../../hooks/useOnPlay';
+import useOnPlay from '../../../../hooks/useOnPlay';
 
 export interface HomePageContentProps {
   songs: Song[];

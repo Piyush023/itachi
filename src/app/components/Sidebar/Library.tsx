@@ -4,11 +4,11 @@ import { useUser } from '@supabase/auth-helpers-react';
 import React from 'react';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { TbPlaylist } from 'react-icons/tb';
-import useAuthModal from '../../../hooks/useAuthModal';
-import useUploadModal from '../../../hooks/useUploadModal';
-import { Song } from '../../../types';
+import useAuthModal from '../../../../hooks/useAuthModal';
+import useUploadModal from '../../../../hooks/useUploadModal';
+import { Song } from '../../../../types';
 import MediaItem from './MediaItem';
-import useOnPlay from '../../../hooks/useOnPlay';
+import useOnPlay from '../../../../hooks/useOnPlay';
 
 export interface LibraryProps {
   songs: Song[];

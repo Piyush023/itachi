@@ -1,14 +1,14 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { Song } from '../../../types';
+import { Song } from '../../../../types';
 import MediaItem from '../Sidebar/MediaItem';
 import LikeButton from '../Search/LikeButton';
 import { BsPauseFill, BsPlayFill } from 'react-icons/bs';
 import { AiFillStepBackward, AiFillStepForward } from 'react-icons/ai';
 import { HiSpeakerWave, HiSpeakerXMark } from 'react-icons/hi2';
 import Slider from './Slider';
-import usePlayer from '../../../hooks/usePlayer';
+import usePlayer from '../../../../hooks/usePlayer';
 import useSound from 'use-sound';
 
 export interface PlayerContentProps {

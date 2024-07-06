@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import { Figtree } from 'next/font/google';
 import './globals.css';
-import Sidebar from '@/components/Sidebar/Sidebar';
+import Sidebar from '@/app/components/Sidebar/Sidebar';
 import SupabaseProvider from '../../providers/SupabaseProvider';
 import UserProvider from '../../providers/UserProvider';
 import ModalProvider from '../../providers/ModalProvider';
 import ToasterProvider from '../../providers/ToastProvider';
 import { getSongsByUserId } from '../../actions/getSongsByUserId';
-import Player from '@/components/Player/Player';
+import Player from '@/app/components/Player/Player';
 
 const font = Figtree({ subsets: ['latin'] });
 

@@ -1,7 +1,7 @@
-import Header from '@/components/Header/Header';
+import Header from '@/app/components/Header/Header';
 import { getSongsByTitle } from '../../../actions/getSongsByTitle';
-import SearchInput from '@/components/Search/SearchInput';
-import SearchContent from '@/components/Search/SearchContent';
+import SearchInput from '@/app/components/Search/SearchInput';
+import SearchContent from '@/app/components/Search/SearchContent';
 
 export interface SearchPageProps {
   searchParams: {

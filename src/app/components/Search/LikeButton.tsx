@@ -3,8 +3,8 @@
 import { useSessionContext } from '@supabase/auth-helpers-react';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
-import useAuthModal from '../../../hooks/useAuthModal';
-import { useUser } from '../../../hooks/useUser';
+import useAuthModal from '../../../../hooks/useAuthModal';
+import { useUser } from '../../../../hooks/useUser';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import toast from 'react-hot-toast';
 

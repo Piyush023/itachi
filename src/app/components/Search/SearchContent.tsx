@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import { Song } from '../../../types';
+import { Song } from '../../../../types';
 import MediaItem from '../Sidebar/MediaItem';
 import LikeButton from './LikeButton';
-import useOnPlay from '../../../hooks/useOnPlay';
+import useOnPlay from '../../../../hooks/useOnPlay';
 
 export interface SearchContentProps {
   songs: Song[];

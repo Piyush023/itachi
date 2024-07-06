@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { IoMdClose } from 'react-icons/io';
-import useAuthModal from '../../../hooks/useAuthModal';
+import useAuthModal from '../../../../hooks/useAuthModal';
 
 export interface ModalProps {
   isOpen: boolean;

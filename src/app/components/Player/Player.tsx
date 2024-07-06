@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import usePlayer from '../../../hooks/usePlayer';
-import useGetSongById from '../../../actions/useGetSongById';
-import useLoadSongUrl from '../../../hooks/useLoadSongUrl';
+import usePlayer from '../../../../hooks/usePlayer';
+import useGetSongById from '../../../../actions/useGetSongById';
+import useLoadSongUrl from '../../../../hooks/useLoadSongUrl';
 import PlayerContent from './PlayerContent';
-import { Song } from '../../../types';
+import { Song } from '../../../../types';
 
 const Player = () => {
   const player = usePlayer();

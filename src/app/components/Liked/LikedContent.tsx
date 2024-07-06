@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { Song } from '../../../types';
+import { Song } from '../../../../types';
 import { useRouter } from 'next/navigation';
-import { useUser } from '../../../hooks/useUser';
+import { useUser } from '../../../../hooks/useUser';
 import MediaItem from '../Sidebar/MediaItem';
 import LikeButton from '../Search/LikeButton';
-import useOnPlay from '../../../hooks/useOnPlay';
+import useOnPlay from '../../../../hooks/useOnPlay';
 
 export interface LikedContentProps {
   songs: any[];

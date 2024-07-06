@@ -1,8 +1,8 @@
-import Header from '@/components/Header/Header';
-import PlaylistItem from '@/components/PlaylistCard/PlaylistItem';
+import Header from '@/app/components/Header/Header';
+import PlaylistItem from '@/app/components/PlaylistCard/PlaylistItem';
 import React from 'react';
 import { getSongs } from '../../actions/getSongs';
-import HomePageContent from '@/components/HomePage/HomePageContent';
+import HomePageContent from '@/app/components/HomePage/HomePageContent';
 
 export const revalidate = 0;
 

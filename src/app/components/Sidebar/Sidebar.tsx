@@ -7,8 +7,8 @@ import { HiHome } from 'react-icons/hi';
 import { BiSearch } from 'react-icons/bi';
 import SidebarItem from './SidebarItem';
 import Library from './Library';
-import { Song } from '../../../types';
-import usePlayer from '../../../hooks/usePlayer';
+import { Song } from '../../../../types';
+import usePlayer from '../../../../hooks/usePlayer';
 import { twMerge } from 'tailwind-merge';
 
 export interface SidebarProps {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { getLikedSongs } from '../../../actions/getLikedSongs';
-import Header from '@/components/Header/Header';
+import Header from '@/app/components/Header/Header';
 import Image from 'next/image';
-import LikedContent from '@/components/Liked/LikedContent';
+import LikedContent from '@/app/components/Liked/LikedContent';
 
 export const revalidate = 0;
 
