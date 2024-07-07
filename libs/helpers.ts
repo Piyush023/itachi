@@ -21,15 +21,11 @@ export const postData = async ({
   url: string;
   data?: { price: Price };
 }) => {
-  console.log('Post Request', url, data);
-
   const res: Response = await fetch(url, {
     method: 'POST',
-    headers: new Headers({
-      'Content-Type': 'application/json',
-      credentials: 'same-origin',
-      body: JSON.stringify(data),
-    }),
+    headers: new Headers({ 'Content-Type': 'application/json' }),
+    credentials: 'same-origin',
+    body: JSON.stringify(data),
   });
 
   if (!res.ok) {

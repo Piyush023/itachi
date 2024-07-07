@@ -13,6 +13,7 @@ import { MyUserContextProvider, useUser } from '../../../../hooks/useUser';
 import { FaUserAlt } from 'react-icons/fa';
 import ToasterProvider from '../../../../providers/ToastProvider';
 import toast from 'react-hot-toast';
+import usePlayer from '../../../../hooks/usePlayer';
 
 export interface HeaderProps {
   children: React.ReactNode;
@@ -21,9 +22,11 @@ export interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ children, className }) => {
   const router = useRouter();
+  const player = usePlayer();
 
   const handleLogout = async () => {
     const { error } = await supabaseClient.auth.signOut();
+    player.reset();
     router.refresh();
 
     if (error) {

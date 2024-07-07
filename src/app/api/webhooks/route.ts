@@ -1,12 +1,12 @@
 import Stripe from 'stripe';
 import { NextResponse } from 'next/server';
 import { headers } from 'next/headers';
-import { stripe } from '../../../../libs/stripe';
 import {
-  manageSubscriptionStatusChange,
-  upsertPriceRecord,
   upsertProductRecord,
+  upsertPriceRecord,
+  manageSubscriptionStatusChange,
 } from '../../../../libs/supabaseAdmin';
+import { stripe } from '../../../../libs/stripe';
 
 const relevantEvents = new Set([
   'product.created',
@@ -50,6 +50,7 @@ export async function POST(request: Request) {
         case 'customer.subscription.created':
         case 'customer.subscription.updated':
         case 'customer.subscription.deleted':
+          console.log('Triggred');
           const subscription = event.data.object as Stripe.Subscription;
           await manageSubscriptionStatusChange(
             subscription.id,
@@ -58,6 +59,7 @@ export async function POST(request: Request) {
           );
           break;
         case 'checkout.session.completed':
+          console.log('Triggred');
           const checkoutSession = event.data.object as Stripe.Checkout.Session;
           if (checkoutSession.mode === 'subscription') {
             const subscriptionId = checkoutSession.subscription;

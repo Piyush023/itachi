@@ -1,6 +1,5 @@
 'use client';
 
-import { useUser } from '@supabase/auth-helpers-react';
 import React from 'react';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { TbPlaylist } from 'react-icons/tb';
@@ -9,13 +8,16 @@ import useUploadModal from '../../../../hooks/useUploadModal';
 import { Song } from '../../../../types';
 import MediaItem from './MediaItem';
 import useOnPlay from '../../../../hooks/useOnPlay';
+import useSubscriptionModal from '../../../../hooks/useSubscriptionModal';
+import { useUser } from '../../../../hooks/useUser';
 
 export interface LibraryProps {
   songs: Song[];
 }
 
 const Library: React.FC<LibraryProps> = ({ songs }) => {
-  const user = useUser();
+  const { user, subscription } = useUser();
+  const subscribeModal = useSubscriptionModal();
 
   const autModal = useAuthModal();
 
@@ -28,6 +30,9 @@ const Library: React.FC<LibraryProps> = ({ songs }) => {
       autModal.onOpen();
     } else {
       // Check for Subscription
+      if (!subscription) {
+        return subscribeModal.onOpen();
+      }
       uploadModal.onOpen();
     }
   };

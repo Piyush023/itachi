@@ -67,9 +67,9 @@ export const createOrRetrieveCustomer = async ({
   // THIS IS FOR A NEW CUSTOMER
   if (error || !data?.stripe_customer_id) {
     const customerData: {
-      metaData: { supabaseUUID: string };
+      metadata: { supabaseUUID: string };
       email?: string;
-    } = { metaData: { supabaseUUID: uuid } };
+    } = { metadata: { supabaseUUID: uuid } };
     if (email) {
       customerData.email = email;
     }
@@ -171,6 +171,7 @@ export const manageSubscriptionStatusChange = async (
       trial_end: subscription.trial_end
         ? toDateTime(subscription.trial_end).toISOString()
         : null,
+      trial_from_plan: true,
     };
 
   const { error } = await supabaseAdmin
