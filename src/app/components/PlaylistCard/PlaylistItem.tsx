@@ -25,7 +25,9 @@ const PlaylistItem: React.FC<{ PlaylistItemProps: PlaylistItemProps }> = ({
     >
       <div className='relative min-h-[64px] min-w-[64px]'>
         <Image
-          src={PlaylistItemProps.image}
+          src={
+            'https://assets.gamesoye.com/NATIVE_APP/images/bowlee/players/1/IND-Jasprit-Bumrah.png'
+          }
           fill
           alt='Image'
           className='object-cover'
