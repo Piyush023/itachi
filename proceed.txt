@@ -1,0 +1,6 @@
+Start - npm run dev
+
+supabase login - npx supabase login
+
+supabase Types Generators - npx supabase gen types typescript --project-id "lrfwyyuwgxawrunrrnfq" --schema public > types_db.ts // This is for this specific project and specific file.                   
+
