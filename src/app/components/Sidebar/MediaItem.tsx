@@ -28,10 +28,7 @@ const MediaItem: React.FC<MediaItemProps> = ({ data, onClick }) => {
     >
       <div className='relative rounded-md min—h-[48px] min-w-[48px] overflow-hidden'>
         <Image
-          src={
-            'https://assets.gamesoye.com/NATIVE_APP/images/bowlee/players/1/IND-Jasprit-Bumrah.png' ||
-            '/images/liked.png'
-          }
+          src={imageUrl || '/images/liked.png'}
           alt='mediaItemImage'
           className='object-cover'
           width={50}

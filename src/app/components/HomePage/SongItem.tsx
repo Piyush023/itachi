@@ -22,10 +22,7 @@ const SongItem: React.FC<SongItemProps> = ({ data, onClick }) => {
       <div className='relative aspect-square w—full h—full rounded-md overflow-hidden'>
         <Image
           className={'object-cover'}
-          src={
-            'https://assets.gamesoye.com/NATIVE_APP/images/bowlee/players/1/IND-Jasprit-Bumrah.png' ||
-            '/images/liked.png'
-          }
+          src={imagePath || '/images/liked.png'}
           width={200}
           height={200}
           alt={'song-image'}
